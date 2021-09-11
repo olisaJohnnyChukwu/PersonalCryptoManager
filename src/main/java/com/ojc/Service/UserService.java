@@ -25,5 +25,10 @@ public class UserService  implements IUserService{
 		// TODO Auto-generated method stub
 		return UserRepository.findByEmail(email)!=null;
 	}
+	@Override
+	public UserEntity findByEmail(String email) {
+		// TODO Auto-generated method stub
+		return UserRepository.findByEmail(email);
+	}
 
 }
