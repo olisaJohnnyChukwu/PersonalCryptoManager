@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="xmlns=http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Registration</title>
+<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+<body>
+
+	<div th:if="${password!=null}">
+		Passwords dont match ! Enter again
+	</div>
+	
+	<div class="form-group">
+		<form  th:action="@{/registration}" th:object="${user}" method="post" >
+		
+		<div class="form-group">
+			<label>First Name</label>
+		<input type="text" th:field="*{firstName}">
+		<br><br>
+		<label>Last Name</label>
+		<input type="text" th:field="*{lastName}">
+		<br><br>
+		<label>email</label>
+		<input type="email" th:field="*{email}">
+		<br><br>
+		<label>Password</label>
+		<input type="password" th:field="*{password}">
+		<br><br>
+		<label>Repeat Password</label>
+		<input type="password" th:field="*{repeatPassword}">
+		<br><br>
+		
+		</div>
+		
+		<button type="submit" class="btn- btn-primary">Submit</button>
+	</form>
+	</div>
+	
+</body>
+</html>
