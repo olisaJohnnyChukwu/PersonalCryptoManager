@@ -8,6 +8,7 @@ public class PersonalCryptoMangerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PersonalCryptoMangerApplication.class, args);
+		System.out.println();
 	}
 
 }

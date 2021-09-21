@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="xmlns=http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+	<table>
+		<thead>
+			<th>Name</th>
+            <th>Price</th>
+		</thead>
+		<tbody>
+			<tr th:each="crypto: ${list}">
+				<td th:text="${crypto.name}"></td>
+				<td th:text="${crypto.price}"></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
